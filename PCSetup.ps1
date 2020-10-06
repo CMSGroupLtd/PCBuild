@@ -24,7 +24,7 @@ function InstallChoco {
 
 function InstallApps {
     # Install the first set of applications. these are quick so ive added them separately
-    choco install adobereader 7zip microsoft-edge notepadplusplus cutepdf -y
+    choco install adobereader 7zip microsoft-edge notepadplusplus cutepdf googlechrome -y
     # Install Office365 applications. This takes a while so is done separately. You can change the options here by following the instructions here: https://chocolatey.org/packages/microsoft-office-deployment
     # choco install microsoft-office-deployment --params="'/Channel:Monthly /Language:en-us /64bit /Product:O365BusinessRetail /Exclude:Lync,Groove'" -y
 }
