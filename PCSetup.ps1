@@ -607,7 +607,7 @@ function LayoutDesign {
         Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
         Exit
     }
-    Import-StartLayout -LayoutPath "c:\build\pcbuild-4\LayoutModification.xml" -MountPath $env:SystemDrive\
+    Import-StartLayout -LayoutPath "c:\build\pcbuild-7\LayoutModification.xml" -MountPath $env:SystemDrive\
     }
     
 function ApplyDefaultApps {
