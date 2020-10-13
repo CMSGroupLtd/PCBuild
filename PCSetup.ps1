@@ -473,7 +473,7 @@ function ReclaimWindows10 {
     Get-AppxPackage "Microsoft.Windows.Photos" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsAlarms" | Remove-AppxPackage
     # Get-AppxPackage "Microsoft.WindowsCamera" | Remove-AppxPackage
-    # Get-AppxPackage "microsoft.windowscommunicationsapps" | Remove-AppxPackage
+    Get-AppxPackage "microsoft.windowscommunicationsapps" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsMaps" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsPhone" | Remove-AppxPackage
     # Get-AppxPackage "Microsoft.WindowsSoundRecorder" | Remove-AppxPackage
@@ -491,7 +491,7 @@ function ReclaimWindows10 {
     Get-AppxPackage "king.com.CandyCrushSaga" | Remove-AppxPackage
     Get-AppxPackage "king.com.CandyCrushFriends" | Remove-AppxPackage
     Get-AppxPackage "king.com.FarmHeroesSaga" | Remove-AppxPackage
-    
+    Get-appxpackage -allusers *spotify* | Remove-AppxPackage
     
     # Install default Microsoft applications
     # Add-AppxPackage -DisableDevelopmentMode -Register "$($(Get-AppXPackage -AllUsers "Microsoft.3DBuilder").InstallLocation)\AppXManifest.xml"
