@@ -623,7 +623,6 @@ function RestartPC{
     Restart-Computer
 }
 
-InstallChoco
 InstallApps
 ReclaimWindows10
 LayoutDesign
