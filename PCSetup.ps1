@@ -12,28 +12,29 @@ function SetPCName {
     Rename-Computer -NewName "$DeviceType-$CompanyName-$AssetID"
 }
 
-# function InstallChoco {
+function InstallChoco {
     # Ask for elevated permissions if required
-    # If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
-        # Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
-        # Exit
+    If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
+        Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+        Exit
         }
     # Install Chocolatey to allow automated installation of packages  
-    # Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     }
 
-# function InstallApps {
+function InstallApps {
     # Install the first set of applications. these are quick so ive added them separately
-    # choco install adobereader -y --force
-    # choco install 7zip -y --force 
-    # choco install microsoft-edge -y --force
-    # choco install notepadplusplus -y --force 
-    # choco install cutepdf -y --force 
-    # choco install googlechrome -y --force 
+    choco install adobereader -y --force
+    choco install 7zip -y --force 
+    choco install microsoft-edge -y --force
+    choco install notepadplusplus -y --force 
+    choco install cutepdf -y --force 
+    choco install googlechrome -y --force 
     # choco install vlc -y --force 
     # choco install jre8 -y --force
     # Install Office365 applications. This takes a while so is done separately. You can change the options here by following the instructions here: https://chocolatey.org/packages/microsoft-office-deployment
     # choco install microsoft-office-deployment --params="'/Channel:Monthly /Language:en-us /64bit /Product:O365BusinessRetail /Exclude:Lync,Groove'" -y
+}
 
 function ReclaimWindows10 {
     # Ask for elevated permissions if required
@@ -496,7 +497,7 @@ function ReclaimWindows10 {
     Get-AppxPackage "Microsoft.Windows.Photos" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsAlarms" | Remove-AppxPackage
     # Get-AppxPackage "Microsoft.WindowsCamera" | Remove-AppxPackage
-    Get-AppxPackage "microsoft.windowscommunicationsapps" | Remove-AppxPackage
+    # Get-AppxPackage "microsoft.windowscommunicationsapps" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsMaps" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsPhone" | Remove-AppxPackage
     # Get-AppxPackage "Microsoft.WindowsSoundRecorder" | Remove-AppxPackage
@@ -514,7 +515,7 @@ function ReclaimWindows10 {
     Get-AppxPackage "king.com.CandyCrushSaga" | Remove-AppxPackage
     Get-AppxPackage "king.com.CandyCrushFriends" | Remove-AppxPackage
     Get-AppxPackage "king.com.FarmHeroesSaga" | Remove-AppxPackage
-    Get-appxpackage -allusers *spotify* | Remove-AppxPackage
+    
     
     # Install default Microsoft applications
     # Add-AppxPackage -DisableDevelopmentMode -Register "$($(Get-AppXPackage -AllUsers "Microsoft.3DBuilder").InstallLocation)\AppXManifest.xml"
@@ -646,7 +647,8 @@ function RestartPC{
     Restart-Computer
 }
 
-InstallApps
+# InstallChoco
+# InstallApps
 ReclaimWindows10
 LayoutDesign
 ApplyDefaultApps
