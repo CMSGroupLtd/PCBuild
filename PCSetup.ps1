@@ -24,12 +24,12 @@ function SetPCName {
 
 # function InstallApps {
     # Install the first set of applications. these are quick so ive added them separately
-    choco install adobereader -y --force
-    choco install 7zip -y --force 
-    choco install microsoft-edge -y --force
-    choco install notepadplusplus -y --force 
-    choco install cutepdf -y --force 
-    choco install googlechrome -y --force 
+    # choco install adobereader -y --force
+    # choco install 7zip -y --force 
+    # choco install microsoft-edge -y --force
+    # choco install notepadplusplus -y --force 
+    # choco install cutepdf -y --force 
+    # choco install googlechrome -y --force 
     # choco install vlc -y --force 
     # choco install jre8 -y --force
     # Install Office365 applications. This takes a while so is done separately. You can change the options here by following the instructions here: https://chocolatey.org/packages/microsoft-office-deployment
