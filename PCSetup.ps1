@@ -12,17 +12,17 @@ function SetPCName {
     Rename-Computer -NewName "$DeviceType-$CompanyName-$AssetID"
 }
 
-function InstallChoco {
+# function InstallChoco {
     # Ask for elevated permissions if required
-    If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
+    # If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
         Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
         Exit
         }
     # Install Chocolatey to allow automated installation of packages  
-    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    # Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     }
 
-function InstallApps {
+# function InstallApps {
     # Install the first set of applications. these are quick so ive added them separately
     choco install adobereader -y --force
     choco install 7zip -y --force 
