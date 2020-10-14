@@ -483,38 +483,38 @@ function ReclaimWindows10 {
 
     # Uninstall default Microsoft applications
     Write-Host "Uninstalling default Microsoft applications..."
-    Get-AppxPackage "Microsoft.3DBuilder" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.BingFinance" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.BingNews" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.BingSports" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.BingWeather" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.Getstarted" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.MicrosoftOfficeHub" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.MicrosoftSolitaireCollection" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.Office.OneNote" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.People" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.SkypeApp" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.Windows.Photos" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.WindowsAlarms" | Remove-AppxPackage
-    # Get-AppxPackage "Microsoft.WindowsCamera" | Remove-AppxPackage
-    Get-AppxPackage "microsoft.windowscommunicationsapps" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.WindowsMaps" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.WindowsPhone" | Remove-AppxPackage
-    # Get-AppxPackage "Microsoft.WindowsSoundRecorder" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.XboxApp" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.3DBuilder" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.BingFinance" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.BingNews" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.BingSports" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.BingWeather" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.Getstarted" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.MicrosoftOfficeHub" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.MicrosoftSolitaireCollection" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.Office.OneNote" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.People" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.SkypeApp" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.Windows.Photos" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.WindowsAlarms" | Remove-AppxPackage
+    # Get-AppxPackage -allusers "Microsoft.WindowsCamera" | Remove-AppxPackage
+    Get-AppxPackage -allusers "microsoft.windowscommunicationsapps" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.WindowsMaps" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.WindowsPhone" | Remove-AppxPackage
+    # Get-AppxPackage -allusers "Microsoft.WindowsSoundRecorder" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.XboxApp" | Remove-AppxPackage
     Get-AppxPackage -AllUsers Microsoft.XboxGamingOverlay | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.ZuneMusic" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.ZuneVideo" | Remove-AppxPackage
-    # Get-AppxPackage "Microsoft.AppConnector" | Remove-AppxPackage
-    # Get-AppxPackage "Microsoft.ConnectivityStore" | Remove-AppxPackage
-    Get-AppxPackage "Microsoft.Office.Sway" | Remove-AppxPackage
-    # Get-AppxPackage "Microsoft.Messaging" | Remove-AppxPackage
-    # Get-AppxPackage "Microsoft.CommsPhone" | Remove-AppxPackage
-    Get-AppxPackage "9E2F88E3.Twitter" | Remove-AppxPackage
-    Get-AppxPackage "king.com.CandyCrushSodaSaga" | Remove-AppxPackage
-    Get-AppxPackage "king.com.CandyCrushSaga" | Remove-AppxPackage
-    Get-AppxPackage "king.com.CandyCrushFriends" | Remove-AppxPackage
-    Get-AppxPackage "king.com.FarmHeroesSaga" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.ZuneMusic" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.ZuneVideo" | Remove-AppxPackage
+    # Get-AppxPackage -allusers "Microsoft.AppConnector" | Remove-AppxPackage
+    # Get-AppxPackage -allusers "Microsoft.ConnectivityStore" | Remove-AppxPackage
+    Get-AppxPackage -allusers "Microsoft.Office.Sway" | Remove-AppxPackage
+    # Get-AppxPackage -allusers "Microsoft.Messaging" | Remove-AppxPackage
+    # Get-AppxPackage -allusers "Microsoft.CommsPhone" | Remove-AppxPackage
+    Get-AppxPackage -allusers "9E2F88E3.Twitter" | Remove-AppxPackage
+    Get-AppxPackage -allusers "king.com.CandyCrushSodaSaga" | Remove-AppxPackage
+    Get-AppxPackage -allusers "king.com.CandyCrushSaga" | Remove-AppxPackage
+    Get-AppxPackage -allusers "king.com.CandyCrushFriends" | Remove-AppxPackage
+    Get-AppxPackage -allusers "king.com.FarmHeroesSaga" | Remove-AppxPackage
     Get-appxpackage -allusers *spotify* | Remove-AppxPackage
     
     # Install default Microsoft applications
