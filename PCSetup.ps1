@@ -497,7 +497,7 @@ function ReclaimWindows10 {
     Get-AppxPackage "Microsoft.Windows.Photos" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsAlarms" | Remove-AppxPackage
     # Get-AppxPackage "Microsoft.WindowsCamera" | Remove-AppxPackage
-    # Get-AppxPackage "microsoft.windowscommunicationsapps" | Remove-AppxPackage
+    Get-AppxPackage "microsoft.windowscommunicationsapps" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsMaps" | Remove-AppxPackage
     Get-AppxPackage "Microsoft.WindowsPhone" | Remove-AppxPackage
     # Get-AppxPackage "Microsoft.WindowsSoundRecorder" | Remove-AppxPackage
