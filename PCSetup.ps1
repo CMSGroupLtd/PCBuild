@@ -516,6 +516,9 @@ function ReclaimWindows10 {
     Get-AppxPackage -AllUsers "king.com.CandyCrushFriends" | Remove-AppxPackage -AllUsers
     Get-AppxPackage -AllUsers "king.com.FarmHeroesSaga" | Remove-AppxPackage -AllUsers
     Get-appxpackage -AllUsers *spotify* | Remove-AppxPackage -AllUsers
+    Get-AppxPackage -AllUsers "Microsoft.YourPhone" | Remove-AppxPackage -AllUsers
+    Get-AppxPackage -AllUsers *Microsoft.OneConnect* | Remove-AppxPackage -AllUsers
+    Get-AppxPackage -AllUsers *Microsoft.MixedReality.Portal* | Remove-AppxPackage -AllUsers
     
     # Install default Microsoft applications
     # Add-AppxPackage -DisableDevelopmentMode -Register "$($(Get-AppXPackage -AllUsers "Microsoft.3DBuilder").InstallLocation)\AppXManifest.xml"
