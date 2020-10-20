@@ -508,8 +508,8 @@ function ReclaimWindows10 {
     # Get-AppxPackage -AllUsers "Microsoft.AppConnector" | Remove-AppxPackage -AllUsers
     # Get-AppxPackage -AllUsers "Microsoft.ConnectivityStore" | Remove-AppxPackage -AllUsers
     Get-AppxPackage -AllUsers "Microsoft.Office.Sway" | Remove-AppxPackage -AllUsers
-    # Get-AppxPackage -AllUsers "Microsoft.Messaging" | Remove-AppxPackage -AllUsers
-    # Get-AppxPackage -AllUsers "Microsoft.CommsPhone" | Remove-AppxPackage -AllUsers
+    Get-AppxPackage -AllUsers "Microsoft.Messaging" | Remove-AppxPackage -AllUsers
+    Get-AppxPackage -AllUsers "Microsoft.CommsPhone" | Remove-AppxPackage -AllUsers
     Get-AppxPackage -AllUsers "9E2F88E3.Twitter" | Remove-AppxPackage -AllUsers
     Get-AppxPackage -AllUsers "king.com.CandyCrushSodaSaga" | Remove-AppxPackage  -AllUsers
     Get-AppxPackage -AllUsers "king.com.CandyCrushSaga" | Remove-AppxPackage -AllUsers
