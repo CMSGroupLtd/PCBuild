@@ -494,7 +494,7 @@ function ReclaimWindows10 {
     Get-AppxPackage -AllUsers "Microsoft.Office.OneNote" | Remove-AppxPackage -AllUsers
     Get-AppxPackage -AllUsers "Microsoft.People" | Remove-AppxPackage -AllUsers
     Get-AppxPackage -AllUsers "Microsoft.SkypeApp" | Remove-AppxPackage -AllUsers 
-    Get-AppxPackage -AllUsers "Microsoft.Windows.Photos" | Remove-AppxPackage -AllUsers
+    # Get-AppxPackage -AllUsers "Microsoft.Windows.Photos" | Remove-AppxPackage -AllUsers
     Get-AppxPackage -AllUsers "Microsoft.WindowsAlarms" | Remove-AppxPackage -AllUsers
     # Get-AppxPackage -AllUsers "Microsoft.WindowsCamera" | Remove-AppxPackage -AllUsers
     Get-AppxPackage -AllUsers "microsoft.windowscommunicationsapps" | Remove-AppxPackage -AllUsers
